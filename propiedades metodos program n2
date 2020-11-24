@@ -1,0 +1,20 @@
+// Ejemplo de un objeto (usuario) con sus propiedades/atributos y sus métodos
+var Usuario = {
+    // propiedades: DATOS del objeto
+    nombre: "Armand",
+    apellido: "Laplana",
+    email: "armand@gmail.com",
+    password: "a1234a",
+    // metodos: ACCIONES que puede realiza el objeto
+    login: function() {
+        return "Login correcto!";
+    },
+    get_nombre_completo: function() {
+        return this.nombre + " " + this.apellido; // hace referencia al propio objeto
+    }
+}
+// interacción con el objeto
+console.log(Usuario); // imprime el objeto entero
+console.log(Usuario.email); // imprime la propiedad "email"
+console.log(Usuario.login()); // llamo al método "login"
+console.log(Usuario.get_nombre_completo()); // llamo al método "get_nombre_completo"
