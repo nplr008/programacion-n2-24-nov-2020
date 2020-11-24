@@ -1,0 +1,51 @@
+// CLASES: Plantilla que permite crear objetos (instancia) que obtendrán propiedades y métodos que se 
+// se diseñan en ella
+// ABSTRACCIÓN: Proceso del diseño de una Clase, asignando sus propiedades y métodos
+// CONSTRUCTOR: Método especial, se llama automáticamente en la instancia de una clase. Generalmente
+// se utiliza para inicializar las propiedades de un objeto
+// ----------------------------------------------------------------------------- 
+// Ejemplo de una clase "Coche"
+class Coche {
+    // las propiedades las define y inicializa el constructor
+    constructor(marca, any) { 
+        this.marca = marca;
+        this.any = any;
+    }
+    // metodo que devuelve la antigüedad del coche
+    edad__coche(){
+        var fecha = new Date();
+        return fecha.getFullYear() - this.any;
+    }
+}
+// instancias de objectos de la clase "Coche"
+var coche1 = new Coche("Seat", 2014);  // creo un objeto "coche1" mediante la instancia a la clase "Coche"
+var coche2 = new Coche("Fiat", 2018); // creo un objeto "coche2" mediante la instancia a la clase "Coche"
+// Acceso a propiedades
+console.log(coche1.any);
+// llamadas a métodos
+console.log(coche1.edad__coche());
+// ----------------------------------------------------------------------------- 
+// Ejemplo de una clase "Usuario"
+class Usuario {
+    // constructor
+    constructor(nick, email, password){
+        this.nick = nick;
+        this.email = email;
+        this.password = password;
+    }
+    // metodos
+    login(){
+        return "Has inciado sesión!";
+    }
+    cerrar__sesion() {
+        return "Has cerrado sesión!";
+    }
+}
+// instancias a la clase Usuario
+var usuario1 = new Usuario("armand","armand@gmail.com","a1234a");
+console.log("Bienvenido usuario: " + usuario1.nick + " , " + usuario1.login());
+console.log("usuario: " + usuario1.nick + " , " + usuario1.cerrar__sesion());
+
+var usuario2 = new Usuario("maria", "maria@gmail.com", "a1234a");
+console.log("Bienvenido usuario: " + usuario2.nick + " , " + usuario2.login());
+console.log("usuario: " + usuario2.nick + " , " + usuario2.cerrar__sesion());
