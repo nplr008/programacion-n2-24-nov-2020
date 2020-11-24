@@ -1,0 +1,53 @@
+// PROGRAMACIÓN ORIENTADA A OBJETOS (POO) en Javascript 
+// def: Podemos definir un objeto como una forma ordenada de agrupar datos (las propiedades/atributos)
+// y operaciones a utilizar sobre esos datos (métodos)
+
+// TERMINOLOGIA:
+// - Clase: Define las características del objeto
+// - Objeto: Una instancia de una clase
+// - Propiedad: Una característica del objeto
+// - Método: Una capacidad del objeto
+// - Constructor: Es una método llamado en el momento de la creación de instancias
+// - Herencia: Una clase puede heredar caracteristicas de otra clase
+// - Encapsulamiento: Una clase sólo define las caracteristicas del objeto, un método sólo define como se ejecuta el método
+// - Abstracción: Conjunto de propiedades y métodos que un objeto debe ser capaz de simular en un modelo de la realidad
+// - Polimorfismo: Diferentes clases podrían definir el mismo método y propiedad
+
+// En JS, podemos definir un objeto sin tener una instancia a una clase (objeto literal)
+// OBJETO LITERAL 
+// var persona1 = { nombre: "Armand", apellido: "Laplana", edad: 40, estatura: 180 };
+// formato en salto de linea
+var persona1 = { 
+    nombre: "Armand", 
+    apellido: "Laplana", 
+    edad: 40, 
+    estatura: 180 
+};
+console.log(persona1); // imprimo todo el objeto (utilizamos node para ejecutar JS en el terminal)
+console.log(persona1.nombre)  // imprimo SÓLO la propiedad "nombre"
+// ---------------------------------------------------------------------------
+// Objeto usando "new"
+// new: instancia: creación de un objeto
+var persona2 = new Object();
+persona2.nombre = "Maria";
+persona2.apellido = "González";
+persona2.edad = 40;
+persona2.estatura = 180;
+
+console.log(persona2); // imprimo todo el objeto (utilizamos node para ejecutar JS en el terminal)
+console.log(persona2.nombre)  // imprimo SÓLO la propiedad "nombre"
+
+// los objetos son mutables
+persona2.edad = 38; // modificamos la propiedad "edad"
+console.log(persona2); // imprimo todo el objeto (utilizamos node para ejecutar JS en el terminal)
+// ---------------------------------------------------------------------------
+// objetos predefinidos en JS 
+// Array
+var coches = new Array("Seat","BMW","Fiat");
+console.log(coches.length); // propiedad del array (longitud)
+coches.push("Renault");  // método del array (inyectar otro valor)
+console.log(coches);
+// String
+var texto = new String("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.");
+console.log(texto.length); // propiedad del array (cantidad de caracteres)
+console.log(texto.search("Ipsum"));
